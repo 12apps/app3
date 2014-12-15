@@ -67,12 +67,12 @@
           <h4 class="modal-title" id="askQuestionModalLabel">So what would you like to know?</h4>
 
         </div>
-        <form class="form-horizontal" id="submit-a-question" role="form" onsubmit="addQuestion()">
+        <form class="form-horizontal" id="submit-a-question" role="form" ng-submit="addQuestion()">
           <div class="modal-body">
             <div class="form-group">
               <label for="inputEmail" class="col-sm-2 control-label">Email</label>
               <div class="col-sm-10">
-                <input type="email" class="form-control" id="email" placeholder="Email" ng-model="email">
+                <input type="email" class="form-control" id="email" placeholder="Email" ng-model="email" required>
               </div>
             </div>
             <div class="form-group">
@@ -88,7 +88,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary" ng-click="addQuestion()">Bring me my answers »</button>
+            <button type="submit" class="btn btn-primary">Bring me my answers »</button>
           </div>
         </form>
       </div>
